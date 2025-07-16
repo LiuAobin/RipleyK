@@ -370,7 +370,7 @@ class MainWindow(QMainWindow):
 
         # 【6】实时计算耗时
         self.label_time = QLabel("耗时：")
-        self.label_time.setStyleSheet("font-size:20px;color: red;")
+        self.label_time.setStyleSheet("color: red;")
         control_layout.addWidget(self.label_time)
         # 创建一个 QTimer 来更新时间标签
         self.timer = QTimer(self)
@@ -511,7 +511,7 @@ class MainWindow(QMainWindow):
             self.ax_map.set_ylim(ymin, ymax)
         # 绘制数据点（假设数据坐标与地图坐标一致）
         if self.data is not None:
-            self.ax_map.scatter(self.data[:, 0], self.data[:, 1], c='red', s=3,label='数据点')
+            self.ax_map.scatter(self.data[:, 0], self.data[:, 1], c='gray', s=5,label='数据点')
             self.ax_map.legend().set_visible(False)
         # 区域缩放，放大为上海市区域
         if self.shanghai_map is not None:
